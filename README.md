@@ -7,6 +7,10 @@ The visualization displays elapsed workout time (minutes) by date, highlighting 
 ## Live Visualization
 https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html
 
+## Preview
+
+![Strava Activity Histogram](Histogram-visualization.png)
+
 ## Tools & Technologies
 - Strava API
 - Postman (OAuth, API requests, data processing, visualization)
