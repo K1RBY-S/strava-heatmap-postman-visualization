@@ -1,4 +1,4 @@
-# Strava Activity Histogram (Postman + Chart.js)
+# Strava Activity Histogram
 
 This project visualizes my workout activity data from Strava using the Strava API, Postman, and Chart.js.
 The goal was to explore workout duration trends over time by transforming raw API responses into an interactive histogram.
