@@ -13,15 +13,12 @@ https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html
 
 ## Tools & Technologies
 - Strava API
-- Postman (OAuth, API requests, data processing, visualization)
+- Postman
 - Chart.js
-- GitHub Pages
 
 ## Authentication & API Access
-- OAuth authorization handled via Strava’s `/oauth/authorize` endpoint  
+- OAuth authorization handled via Strava API  
 - Access and refresh tokens managed securely in Postman environments  
-- API requests scoped to `activity:readall`  
-- Sensitive credentials are **not included** in this repository
 
 ## Data Processing
 All data processing is performed within Postman:
