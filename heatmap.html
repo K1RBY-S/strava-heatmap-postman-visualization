@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Strava Activity Histogram</title>
 
-    <!-- Chart.js 2.x (matches your original Postman visualizer config) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <style>
@@ -73,7 +72,7 @@
         const errorEl = document.getElementById("error");
 
         try {
-          // 1️⃣ Fetch the full dataset from your repo root
+          //  Fetch dataset from your repo 
           const res = await fetch("data.json?version=2");
 
           if (!res.ok) {
@@ -82,14 +81,14 @@
 
           const response = await res.json(); // array of Strava activities
 
-          // 2️⃣ Sort by date ascending
+          // Sort by date
           const sorted = response
             .slice()
             .sort(
               (a, b) => new Date(a.start_date) - new Date(b.start_date)
             );
 
-          // 3️⃣ Build labels + elapsed_time (seconds → minutes, 1 decimal)
+          // Build labels + elapsed_time
           const labels = sorted.map(item => {
             const d = new Date(item.start_date);
             return d.toISOString().slice(0, 10); // YYYY-MM-DD
@@ -101,7 +100,7 @@
               : 0
           );
 
-          // 4️⃣ Render Chart.js bar chart
+          // bar chart
           const ctx = document.getElementById("workoutChart");
 
           new Chart(ctx, {
